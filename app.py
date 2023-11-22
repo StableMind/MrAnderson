@@ -191,14 +191,12 @@ agent = initialize_agent(
 # 5. Set this as an API endpoint via FastAPI
 app = FastAPI()
 
-
 class Query(BaseModel):
     query: str
-
 
 @app.post("/")
 def researchAgent(query: Query):
    query = query.query
-    content = agent({"input": query})
-    actual_content = content['output']
-    return actual_content
+   content = agent({"input": query})
+   actual_content = content['output']
+   return actual_content
