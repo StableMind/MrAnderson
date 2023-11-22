@@ -146,7 +146,7 @@ system_message = SystemMessage(
             Please make sure you complete the objective above with the following rules:
             1/ You should do enough research to gather as much information as possible about the objective
             2/ If there are url of relevant links & articles, you will scrape it to gather more information
-            3/ After scraping & search, you should think "is there any new things i should search & scraping based on the data I collected to increase research quality?" If answer is yes, continue; But don't do this more than 3 iterations
+            3/ After scraping & search, you should think "is there any new things i should search & scraping based on the data I collected to increase research quality?" If answer is yes, continue; But don't do this more than 3 iteratins
             4/ You should not make things up, you should only write facts & data that you have gathered
             5/ In the final output, You should include all reference data & links to back up your research; You should include all reference data & links to back up your research
             6/ In the final output, You should include all reference data & links to back up your research; You should include all reference data & links to back up your research"""
@@ -170,23 +170,25 @@ agent = initialize_agent(
     memory=memory,
 )
 
+
 # 4. Use streamlit to create a web app
 # def main():
-#    st.set_page_config(page_title="AI research agent", page_icon=":uk:")
+#     st.set_page_config(page_title="AI research agent", page_icon=":bird:")
 
-#     st.header("AI research agent :spook:")
+#     st.header("AI research agent :bird:")
 #     query = st.text_input("Research goal")
 
-#    if query:
-#        st.write("Doing research for ", query)
+#     if query:
+#         st.write("Doing research for ", query)
 
-#       result = agent({"input": query})
+#         result = agent({"input": query})
 
-#        st.info(result['output'])
+#         st.info(result['output'])
 
 
 # if __name__ == '__main__':
-#    main()
+#     main()
+
 
 # 5. Set this as an API endpoint via FastAPI
 app = FastAPI()
